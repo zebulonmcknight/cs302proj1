@@ -55,6 +55,16 @@ string timeToString(int time)
 	return formattedTime; 
 } 
 
+string convertToSpace(string word){ // Semmy 8/25/2024 (12:45 PM)
+	for(int i = 0; i < word.size(); i++){
+		if(word[i] == '_'){
+			word[i] = ' ';
+		}
+	}
+	return word;
+}
+
+
 int main(int argc, char *argv[])
 {
 	if (argc != 2)
