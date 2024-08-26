@@ -33,9 +33,18 @@ struct Artist
 int timeToInt(string formattedTime)
 {
 	int time = 0; 
+	string minutes = "", seconds = ""; 
 
-	string minutes = formattedTime.substr(0,2); 
-	string seconds = formattedTime.substr(3,4); 
+	for (size_t i = 0; i < formattedTime.size(); i++)
+	{
+		if (formattedTime[i] == ':')
+		{
+			seconds = formattedTime.substr(i+1, 2); 
+			break; 
+		} 
+
+		minutes += formattedTime[i];  
+	} 
 
 	time += stoi(minutes) * 60; 
 	time += stoi(seconds); 
@@ -61,7 +70,16 @@ int main(int argc, char *argv[])
 	{
 		cerr<<"usage: ./lib_info.cpp filename"<<endl; 
 		return 1; 
-	}  
+	}
+
+	string name, time, artist, album, genre, track;
+	ifstream fin; 
+	fin.open(argv[1]); 
+ 
+	while (fin>>name>>time>>artist>>album>>genre>>track)
+	{
+		cout<<time<<"::"<<timeToInt(time)<<endl; 
+	} 
 
 	return 0; 
 } 
