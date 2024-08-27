@@ -1,0 +1,14 @@
+Zebulon Mcknight and Semmy
+
+github: zebulonmcknight and NotASniper
+url:: https://github.com/zebulonmcknight/cs302proj1
+
+I compiled using :
+	g++ -Wall -Wextra -std=c++11 -o lib_info lib_info.cpp
+This compilation command was taken from Dr.Planks Notes. 
+
+Our group dynamics were pretty solid but unorganized due to it being the start
+of the year. We ran into some issues with pushing to the repository, but ended
+up with both of us contributing to helper functions and the main loop to
+varying extents. We didn't code together because their wasn't a convenient time, 
+but we still contributed relatively equally. 
