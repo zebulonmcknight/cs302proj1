@@ -12,6 +12,9 @@
 using namespace std; 
 
 // Structures for organizing necessary data
+// For this program their will be a map <string, Artist> artists. Each artist 
+// will contain a map <string, Album> albums. Each entry in albums will contain
+// a map <int, Song> songs. Each entry in songs will contain a Song struct. 
 struct Song
 {
 	string title;  
@@ -34,6 +37,7 @@ struct Artist
 	int nSongs; 
 };  
 
+// HELPER FUNCTIONS
 // Converts a string representing time of format "MM:SS" to an integer number of seconds
 int timeToInt(string formattedTime)
 {
@@ -86,7 +90,7 @@ string convertToSpace(string &word){ // Semmy 8/25/2024 (12:45 PM)
 	return word;
 }
 
-
+// MAIN
 int main(int argc, char *argv[])
 {
 	if (argc != 2)
